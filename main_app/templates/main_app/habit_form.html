@@ -6,14 +6,17 @@
 {% endblock %}
 
 {% block content %}
-
-<h1>Add a New Habit</h1>
+{% if habit %}
+  <h1>Edit this Habit</h1>
+{% else %}
+  <h1>Add a New Habit</h1>
+{% endif %}
 <form action="" method="post" autocomplete="off">
   {% csrf_token %}
   <table>
     {{ form.as_table }}
   </table>
-  <button type="submit">Add!</button>
+  <button type="submit">Submit!</button>
 </form>
 
 {% endblock %}
