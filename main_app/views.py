@@ -15,4 +15,3 @@ class HabitDetail(DetailView):
 class HabitCreate(CreateView):
   model = Habit
   fields = ['habit', 'category', 'description']
-  success_url = '/habits/'
