@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/habits/habit-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+  
+<div class="card">
+  <h2>{{ habit.habit }}</h2>
+  <p>{{ habit.category }}</p>
+  <p>{{ habit.description }}</p>
+  <p>Current Streak: {{ habit.current_streak }} days</p>
+  <p>Best Streak: {{ habit.best_streak }} days</p>
+</div>
+<button>Another day down -- increase my streak!</button>
+<a href="">Edit</a>
+<a href="">Delete</a>
+
+{% endblock %}

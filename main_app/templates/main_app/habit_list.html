@@ -12,16 +12,12 @@
 {% block content %}
 
 <section>
-  {% for toy in toy_list %}
-  <div class="card" style="border-color: {{ toy.color }}">
-    <div class="card-bg" style="background-color: {{ toy.color }}"></div>
-    <a href="{% url 'toy-detail' toy.id %}">
-      <div class="card-content">
-        <h2>{{ toy.name }}</h2>
-        <p>A {{ toy.color }} toy</p>
-      </div>
-    </a>
-  </div>
+  {% for habit in habit_list %}
+  <a href="{% url 'habit-detail' habit.id %}">
+    <div class="habit-card">
+      <h1>{{ habit.habit }}</h1>
+    </div>
+  </a>
   {% endfor %}
 </section>
 
