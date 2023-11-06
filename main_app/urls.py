@@ -9,5 +9,6 @@ urlpatterns = [
   path('habits/<int:pk>/update/', views.HabitUpdate.as_view(), name='habit-update'),
   path('habits/<int:pk>/delete', views.HabitDelete.as_view(), name='habit-delete'),
   path('habits/<int:habit_id>/increase_streak/', views.increase_streak, name='increase-streak'),
-  path('habits/<int:habit_id>/reset_streak/', views.reset_streak, name='reset-streak')
+  path('habits/<int:habit_id>/reset_streak/', views.reset_streak, name='reset-streak'),
+  path('accounts/signup/', views.signup, name='signup')
 ]
