@@ -10,7 +10,7 @@
 
 {% block content %}
 <section class='section' id='home'>
-  <h1>Quick easy accountable growth</h1>
+  <h1>Sustainable growth made easy</h1>
   <lottie-player src="https://lottie.host/d0dfea6b-3514-424e-9420-8685168efef5/mew2lGDdTf.json" background="##FFFFFF" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
   <h3>They say it takes 30 days to form a habit. Accountability is the hardest part. Habitual is here to help.</h3>
   {% if not user.is_authenticated %}
@@ -25,7 +25,18 @@
 </section>
 
 <section class='section' id='about'>
-  <h1>This is the about section</h1>
+  <div class="about-card">
+    <h1>About Habitual</h1>
+    <p>We all have those things that we know we should be doing but we're not. Maybe you aren't flossing twice a day. Maybe you're not practicing your sport enough. Or maybe you want to pick up a new hobby but are finding it difficult to add to your routine. Whatever the case, we've got you. Here at Habitual, we can provide the accountability and tracking needed to make those activities automatic.</p>
+    <h1>About the author</h1>
+    <p>Hi there, friend! My name is Nate Sobeck and I'm a full-stack devloper, hobbyist, and workout enthusiast. As someone with a lot of interests, it is sometimes hard to fit it all in. I need someone or something to be accountable to. So, Habitual was born to help me stay motivated and on track. I hope that it can help you too!</p>
+    <h3>Contact</h3>
+    <div class="contact-card">
+      <a href="https://github.com/natesobeck/"><img src="{% static 'images/github.png' %}" alt="GitHub logo" class='icon'></a>
+      <a href="https://www.linkedin.com/in/n-sobeck/"><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn logo" class='icon'></a>
+      <a href="mailto: nsobeck910@gmail.com"><img src="{% static 'images/email.png' %}" alt="Email icon" class='icon'></a>
+    </div>
+  </div>
 </section>
 
 {% endblock content %}
