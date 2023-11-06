@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% endblock head %}
+
 {% block content %}
-
-<h1>Welcome to Habitual!</h1>
-
-{% if not user.is_authenticated %}
-  <section>
+<section class='section'>
+  <h1>Welcome to Habitual!</h1>
+  <h3>They say it takes 30 days to form a habit. Accountability is the hardest part. Habitual is here to help.</h3>
+  {% if not user.is_authenticated %}
     <form action="{% url 'home' %}" method="post" class="login">
       <h1>Login</h1>
       {% csrf_token %}
@@ -14,7 +19,11 @@
       <input type="hidden" name="next" value="{{ next }}">
       <button type="submit" class="btn submit">Login</button>
     </form>
-  </section>
-{% endif %}
+  {% endif %}
+</section>
+
+<section class='section' id='about'>
+  <h1>This is the about section</h1>
+</section>
 
 {% endblock content %}

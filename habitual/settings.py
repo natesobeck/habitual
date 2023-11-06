@@ -129,7 +129,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 LOGIN_URL = 'home'
-LOGIN_REDIRECT_URL = 'habit-create'
+LOGIN_REDIRECT_URL = 'habit-index'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Default primary key field type

@@ -5,7 +5,7 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'css/habit/habit-index.css' %}"
+  href="{% static 'css/habits/index.css' %}"
 />
 {% endblock %}
 
@@ -16,6 +16,21 @@
   <a href="{% url 'habit-detail' habit.id %}">
     <div class="habit-card">
       <h1>{{ habit.habit }}</h1>
+      <h3>{{ habit.category }}</h3>
+      {% if habit.current_streak == 0 %}
+        <h3>You haven't started training this habit yet.</h3>
+      {% elif habit.current_streak == 1 %}
+        <h3>1 day down!</h3>
+      {% elif habit.current_streak > 7 %}
+        <h3>You're at {{ habit.current_streak }} days, let's get to a week!</h3>
+      {% elif habit.current_streak > 14 %}
+        <h3>You're at {{ current_streak }} days, keep it up! Over halfway now. Be proud.</h3>
+      {% elif habit.current_streak > 23 %}
+        <h3>{{ habit.current_streak }} days in now. Less than a week left! You got this.</h3>
+      {% elif habit.current_streak > 30 %}
+        <h3>This is a certified habit! You probably don't even need this app anymore. Go you!</h3>
+      {% endif %}
+      <h3>Your best streak is {{ habit.best_streak }} days!</h3>
     </div>
   </a>
   {% endfor %}
