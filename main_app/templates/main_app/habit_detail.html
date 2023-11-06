@@ -18,7 +18,11 @@
   <p>Current Streak: {{ habit.current_streak }} days</p>
   <p>Best Streak: {{ habit.best_streak }} days</p>
 </div>
-<button>Another day down -- increase my streak!</button>
+<form action="{% url 'increase-streak' habit.id %}" method="post">
+  {% csrf_token %}
+  <button type='submit'>Increase my streak</button>
+</form>
+<button>I broke my streak 😞 reset this habit's streak to one.</button>
 <a href="{% url 'habit-update' habit.id %}">Edit</a>
 <a href="{% url 'habit-delete' habit.id %}">Delete</a>
 
