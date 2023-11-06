@@ -11,8 +11,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class Home(LoginView):
   template_name = 'home.html'
 
-class HabitList(LoginRequiredMixin, ListView):
-  model = Habit
+@login_required
+def habit_index(request):
+  habits = Habit.objects.filter(user=request.user)
+  return render(request, 'habits/index.html', { 'habits': habits })
 
 class HabitDetail(LoginRequiredMixin, DetailView):
   model = Habit

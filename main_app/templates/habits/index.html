@@ -12,7 +12,7 @@
 {% block content %}
 
 <section>
-  {% for habit in habit_list %}
+  {% for habit in habits %}
   <a href="{% url 'habit-detail' habit.id %}">
     <div class="habit-card">
       <h1>{{ habit.habit }}</h1>
