@@ -15,10 +15,16 @@
   <header>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="{% url 'habit-index' %}">All Your Habits</a></li>
-        <li><a href="{% url 'habit-create' %}">Add a New Habit</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}">About</a></li>
+          <li><a href="{% url 'habit-index' %}">All Your Habits</a></li>
+          <li><a href="{% url 'habit-create' %}">Add a New Habit</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
+        {% else %} 
+          <li><a href="{% url 'home' %}">About</a></li>
+          <li><a href="{% url 'home' %}">Log In</a></li>
+        {% endif %}
       </ul>
     </nav>
   </header>

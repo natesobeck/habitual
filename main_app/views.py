@@ -13,12 +13,13 @@ class HabitList(ListView):
 class HabitDetail(DetailView):
   model = Habit
 
-  def increase_streak(self):
-    print('hello')
-
 class HabitCreate(CreateView):
   model = Habit
   fields = ['habit', 'category', 'description']
+
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 class HabitUpdate(UpdateView):
   model = Habit
