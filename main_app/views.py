@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from .models import Habit
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
 
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 class HabitList(ListView):
   model = Habit
