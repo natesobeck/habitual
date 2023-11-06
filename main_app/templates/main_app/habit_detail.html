@@ -15,7 +15,21 @@
   <h2>{{ habit.habit }}</h2>
   <p>{{ habit.category }}</p>
   <p>{{ habit.description }}</p>
-  <p>Current Streak: {{ habit.current_streak }} days</p>
+  {% if habit.current_streak == 0 %}
+    <h3>You haven't started training this habit yet.</h3>
+  {% elif habit.current_streak == 1 %}
+    <h3>1 day down!</h3>
+  {% elif habit.current_streak < 7 %}
+    <h3>You're at {{ habit.current_streak }} days, let's get to a week!</h3>
+  {% elif habit.current_streak < 14 %}
+    <h3>Over a week down with {{ habit.current_streak }} days, keep it up!</h3>
+  {% elif habit.current_streak < 23 %}
+    <h3>{{ habit.current_streak }} days in now. You're over halfway, be proud!</h3>
+  {% elif habit.current_streak < 30 %}
+    <h3>You're at {{ habit.current_streak }} days. Less than a week left! You got this.</h3>
+  {% else %}
+    <h3>This is a certified habit! You probably don't even need this app anymore. Go you!</h3>
+  {% endif %}
   <p>Best Streak: {{ habit.best_streak }} days</p>
 </div>
 <form action="{% url 'increase-streak' habit.id %}" method="post">
