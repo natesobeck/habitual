@@ -35,5 +35,8 @@ def increase_streak(request, habit_id):
   habit.save()
   return redirect('habit-detail', pk=habit_id)
 
-def reset_streak(request):
-  current_streak = 0
+def reset_streak(request, habit_id):
+  habit=Habit.objects.get(id=habit_id)
+  habit.current_streak = 0
+  habit.save()
+  return redirect('habit-detail', pk=habit_id)

@@ -22,7 +22,10 @@
   {% csrf_token %}
   <button type='submit'>Increase my streak</button>
 </form>
-<button>I broke my streak 😞 reset this habit's streak to one.</button>
+<form action="{% url 'reset-streak' habit.id %}" method="post">
+  {% csrf_token %}
+  <button type="submit">I broke my streak 😞 reset this habit's streak to one.</button>
+</form>
 <a href="{% url 'habit-update' habit.id %}">Edit</a>
 <a href="{% url 'habit-delete' habit.id %}">Delete</a>
 
