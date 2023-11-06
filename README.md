@@ -13,3 +13,5 @@ ATTRIBUTIONS
 <a href="https://www.flaticon.com/free-icons/exercise" title="exercise icons">Exercise icons created by Freepik - Flaticon</a>
 
 https://app.lottiefiles.com/animation/73e8b425-68e9-4465-8f5e-bf1423bb5e5e?channel=web&source=public-animation&panel=embed
+
+https://myfreelogomaker.com/

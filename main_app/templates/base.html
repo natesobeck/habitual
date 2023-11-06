@@ -16,7 +16,7 @@
     <nav>
       <ul>
         {% if user.is_authenticated %}
-          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}"><img src="{% static 'images/logo.svg' %}" alt="The habitual logo." id="logo"></a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="{% url 'habit-index' %}">All Your Habits</a></li>
           <li><a href="{% url 'habit-create' %}">Add a New Habit</a></li>

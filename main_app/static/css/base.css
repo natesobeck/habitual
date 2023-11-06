@@ -26,27 +26,31 @@ body {
   min-height: 100vh;
   --color1: #F06955;
   --color2: #FBF0DC;
-  --color3: #41BEEC;
+  --color3: #4897b3;
   --color4: #3E3563;
   --color5: #fff49b;
-  background-color: var(--color2);
-  color: var(color4);
+  background-color: var(--color4);
+  color: white;
 }
 
 header {
   width: 100%;
-  border-bottom: 2px solid black;
+  background-color: var(--color3);
+}
+
+nav {
+  width: 100%;
 }
 
 nav a {
   font-size: 18px;
   text-decoration: none;
-  color: var(--color3);
+  color: white;
 }
 
 nav a:hover {
   cursor: pointer;
-  color: var(--color4);
+  color: var(--color1);
 }
 
 nav ul {
@@ -68,4 +72,11 @@ nav li {
   text-decoration: none;
   cursor: pointer;
   font-family: inherit;
+}
+
+#logo {
+  height: 40px;
+  border-radius: 3px;
+  position: relative;
+  right: 40px;
 }
