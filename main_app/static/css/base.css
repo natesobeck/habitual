@@ -24,6 +24,13 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  --color1: #F06955;
+  --color2: #FBF0DC;
+  --color3: #41BEEC;
+  --color4: #3E3563;
+  --color5: #fff49b;
+  background-color: var(--color2);
+  color: var(color4);
 }
 
 header {
@@ -34,10 +41,12 @@ header {
 nav a {
   font-size: 18px;
   text-decoration: none;
+  color: var(--color3);
 }
 
 nav a:hover {
   cursor: pointer;
+  color: var(--color4);
 }
 
 nav ul {
