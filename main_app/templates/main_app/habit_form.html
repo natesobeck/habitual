@@ -8,7 +8,7 @@
 
 {% block content %}
   <div class="form-container">
-    <dotlottie-player src="https://lottie.host/79f6ca5e-f182-4ce5-a2a5-5e7388ac8133/6qi4gbADI7.json" background="transparent" speed="1" loop autoplay class="form-animation"></dotlottie-player>
+    <dotlottie-player src="{% static 'animations/add-habit.json' %}" background="transparent" speed="1" loop autoplay class="form-animation"></dotlottie-player>
     <form action="" method="post" autocomplete="off" class="form add">
       {% csrf_token %}
       {% if habit %}

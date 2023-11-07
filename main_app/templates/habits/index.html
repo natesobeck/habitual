@@ -8,7 +8,6 @@
   href="{% static 'css/habits/index.css' %}"
 />
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +15,7 @@
 <section class="section-container">
   {% if habits %}
     <h1 class="header">All My Habits</h1>
-    <lottie-player src="https://lottie.host/ab12112e-5b9f-4c4d-b04f-53b35e13d55f/LPMh7iTQmA.json" background="##FFFFFF" speed="1" loop autoplay direction="1" mode="normal" class="index-animation"></lottie-player>
+    <lottie-player src="{% static 'animations/habit-index.json' %}" background="##FFFFFF" speed="1" loop autoplay direction="1" mode="normal" class="index-animation"></lottie-player>
     <div class="habits-container">
       {% for habit in habits %}
         <a href="{% url 'habit-detail' habit.id %}">
@@ -51,7 +50,7 @@
       {% endfor %}
     </div>
   {% else %}
-    <lottie-player src="https://lottie.host/f13fcda4-2e2e-44c2-9413-59a449d85295/vXFBR9ClwJ.json" background="##ffffff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
+    <lottie-player src="{% static 'animations/empty.json' %}" background="##ffffff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
     <h1 class="header">Wow, such empty! This is where your habits will be diplayed. <a href="{% url 'habit-create' %}" class="a">Get started!</a></h1>
   {% endif %}
 </section>
