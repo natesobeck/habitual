@@ -2,7 +2,7 @@
 
 ![A screenshot of the Habitual home page.](./main_app/static/images/README-screenshot-home.png)
 
-### [Go to Habitual!]()
+### [Go to Habitual!](https://habitual.fly.dev/)
 
 Getting into new habits is hard. Often there's no one to be accountable to but yourself. In my own life, I have found that being accountable to someone or something keeps me on track. Maybe you're not practicing your sport enough. Or maybe you want to pick up a new hobby but are finding it difficult to add to your routine. Whatever the case, we've got you.
 
