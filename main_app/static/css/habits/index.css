@@ -6,12 +6,13 @@
   height: 400px;
   width: 250px;
   border-radius: 10px;
-  background-image: linear-gradient(to left bottom, #cf3d27, #df7231, #eba049, #f5cb6d, #fff49b);
+  background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
   box-shadow: 5px 5px 6px -1px #AAA;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 a {

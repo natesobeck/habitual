@@ -55,12 +55,10 @@
   max-width: 100vh;
 }
 
-.header {
-  color: var(--color5)
-}
-
 .section-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 30px;
 }
 
@@ -99,3 +97,4 @@
 .title {
   margin-top: -50px;
 }
+

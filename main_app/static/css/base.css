@@ -72,6 +72,7 @@ nav li {
   text-decoration: none;
   cursor: pointer;
   font-family: inherit;
+  font-size: 1rem;
 }
 
 #logo {
@@ -84,6 +85,8 @@ nav li {
 
 input, textarea {
   font-family: inherit;
+  border-radius: 3px;
+  border-style: none;
 }
 
 .submit {
@@ -94,4 +97,49 @@ input, textarea {
 .submit:hover {
   cursor: pointer;
   background-image: linear-gradient(to left bottom, #04ceff, #1db8e6, #26a2cd, #298db5, #2a799c);
+}
+
+.edit {
+  background-image: linear-gradient(to left bottom, #33bbc5, #46c6c6, #5bd1c6, #6fdcc6, #85e6c5);
+  color: white;
+}
+
+.edit:hover {
+  background-image: linear-gradient(to left bottom, #50c4cc, #6cd3d2, #86e2d8, #a0f0df, #b9ffe7);
+}
+
+.delete {
+  color: white;
+  background-image: linear-gradient(to left bottom, #b02f1d, #bf2b22, #cd2428, #dd192f, #ec0037);
+}
+
+.delete:hover {
+  background-image: linear-gradient(to left bottom, #bd2d19, #cd2920, #dd2328, #ee1831, #ff003b);
+}
+
+.reset {
+  background-image: linear-gradient(to left bottom, #951fb9, #9c3dc0, #a354c6, #aa68cc, #b17bd1);
+  color: white;
+}
+
+.reset:hover {
+  background-image: linear-gradient(to left bottom, #8a1cab, #993cbb, #a856cb, #b76edb, #c686eb);
+}
+
+.confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm button, .confirm a {
+  margin: 0px 10px;
+}
+
+.header {
+  color: var(--color5)
+}
+
+.confirm-header {
+  margin-top: 30px;
 }
