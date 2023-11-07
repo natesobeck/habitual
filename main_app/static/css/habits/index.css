@@ -1,5 +1,6 @@
 .section-container {
   margin-top: 30px;
+  text-align: center;
 }
 
 .habit-card {
@@ -17,5 +18,15 @@
 
 a {
   text-decoration: none;
-  color: var(--color4)
+  color: var(--color1);
+}
+
+.a {
+  color: white;
+  border-bottom: 2px solid var(--color1);
+}
+
+.a:hover {
+  color: var(--color1);
+  border-bottom: 2px solid var(--color3);
 }

@@ -51,3 +51,15 @@ td > textarea {
   border-radius: 3px;
   background-color: white;
 }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-animation {
+  width: 75%;
+  max-width: 400px;
+}

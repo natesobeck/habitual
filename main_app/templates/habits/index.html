@@ -7,26 +7,32 @@
   type="text/css"
   href="{% static 'css/habits/index.css' %}"
 />
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 {% endblock %}
 
 {% block content %}
 
 <section class="section-container">
-  {% for habit in habits %}
-  <a href="{% url 'habit-detail' habit.id %}">
-    <div class="habit-card">
-      <h1 class="header">{{ habit.habit }}</h1>
-      <h3>{{ habit.category }}</h3>
-      {% if habit.current_streak == 0 %}
-        <h3>You haven't begun training this habit.</h3>
-      {% elif habit.current_streak == 1 %}
-        <h3>{{ habit.current_streak }} day down.</h3>
-      {% elif habit.current_streak > 1 %}
-        <h3>{{ habit.current_streak }} days down.</h3>
-      {% endif %}
-    </div>
-  </a>
-  {% endfor %}
+  {% if habits %}
+    {% for habit in habits %}
+      <a href="{% url 'habit-detail' habit.id %}">
+        <div class="habit-card">
+          <h1 class="header">{{ habit.habit }}</h1>
+          <h3>{{ habit.category }}</h3>
+          {% if habit.current_streak == 0 %}
+            <h3>You haven't begun training this habit.</h3>
+          {% elif habit.current_streak == 1 %}
+            <h3>{{ habit.current_streak }} day down.</h3>
+          {% elif habit.current_streak > 1 %}
+            <h3>{{ habit.current_streak }} days down.</h3>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  {% else %}
+    <lottie-player src="https://lottie.host/f13fcda4-2e2e-44c2-9413-59a449d85295/vXFBR9ClwJ.json" background="##ffffff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
+    <h1 class="header">Wow, such empty! This is where your habits will be diplayed. <a href="{% url 'habit-create' %}" class="a">Get started!</a></h1>
+  {% endif %}
 </section>
 
 {% endblock %}
