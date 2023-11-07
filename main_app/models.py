@@ -7,7 +7,7 @@ CATEGORIES = (
   ('H', 'Home'),
   ('W', 'Work'),
   ('R', 'Personal Relationships'),
-  ('H', 'Health & Fitness'),
+  ('F', 'Health & Fitness'),
   ('B', 'Hobbies'),
   ('E', 'Environmental'),
   ('M', 'Miscellaneous')

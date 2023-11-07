@@ -143,3 +143,16 @@ input, textarea {
 .confirm-header {
   margin-top: 30px;
 }
+
+.animation {
+  width: 80%;
+  max-width: 100vh;
+}
+
+.category-icon {
+  height: 100px;
+}
+
+.category-icon-l {
+  height: 150px;
+}

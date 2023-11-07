@@ -1,6 +1,10 @@
 .section-container {
   margin-top: 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .habit-card {
@@ -14,6 +18,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  margin: 0px 10px;
 }
 
 a {
@@ -29,4 +34,16 @@ a {
 .a:hover {
   color: var(--color1);
   border-bottom: 2px solid var(--color3);
+}
+
+.habits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.index-animation {
+  width: 100%;
+  max-width: 400px;
 }

@@ -50,11 +50,6 @@
   padding-top: 15px;
 }
 
-.animation {
-  width: 80%;
-  max-width: 100vh;
-}
-
 .section-container {
   display: flex;
   justify-content: center;
@@ -72,6 +67,7 @@
   background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
   border-radius: 10px;
   margin-top: 10%;
+  box-shadow: 5px 5px 6px -1px #AAA;
 }
 
 .login input {

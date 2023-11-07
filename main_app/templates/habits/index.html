@@ -8,27 +8,48 @@
   href="{% static 'css/habits/index.css' %}"
 />
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 {% endblock %}
 
 {% block content %}
 
 <section class="section-container">
   {% if habits %}
-    {% for habit in habits %}
-      <a href="{% url 'habit-detail' habit.id %}">
-        <div class="habit-card">
-          <h1 class="header">{{ habit.habit }}</h1>
-          <h3>{{ habit.category }}</h3>
-          {% if habit.current_streak == 0 %}
-            <h3>You haven't begun training this habit.</h3>
-          {% elif habit.current_streak == 1 %}
-            <h3>{{ habit.current_streak }} day down.</h3>
-          {% elif habit.current_streak > 1 %}
-            <h3>{{ habit.current_streak }} days down.</h3>
-          {% endif %}
-        </div>
-      </a>
-    {% endfor %}
+    <h1 class="header">All My Habits</h1>
+    <lottie-player src="https://lottie.host/ab12112e-5b9f-4c4d-b04f-53b35e13d55f/LPMh7iTQmA.json" background="##FFFFFF" speed="1" loop autoplay direction="1" mode="normal" class="index-animation"></lottie-player>
+    <div class="habits-container">
+      {% for habit in habits %}
+        <a href="{% url 'habit-detail' habit.id %}">
+          <div class="habit-card">
+            <h1 class="header">{{ habit.habit }}</h1>
+            {% if habit.category == 'L' %}
+              <img src="{% static 'images/mountain.png' %}" alt="A graphic of a mountain">
+            {% elif habit.category == 'H' %}
+              <img src="{% static 'images/fireplace.png' %}" alt="A graphic of a fireplace" class="category-icon">
+            {% elif habit.category == 'W' %}
+              <img src="{% static 'images/work.png' %}" alt="A graphic of a briefcase" class="category-icon">
+            {% elif habit.category == 'R' %}
+              <img src="{% static 'images/buddy.png' %}" alt="A graphic of two friends side by side" class="category-icon">
+            {% elif habit.category == 'F' %}
+              <img src="{% static 'images/running.png' %}" alt="A graphic of a man running" class="category-icon">
+            {% elif habit.category == 'B' %}
+              <img src="{% static 'images/night.png' %}" alt="A graphic of a night sky" class="category-icon">
+            {% elif habit.category == 'E' %}
+              <img src="{% static 'images/earth.png' %}" alt="A graphic of the earth held by two hands with a small plant growing from it" class="category-icon">
+            {% else %}
+              <img src="{% static 'images/desert.png' %}" alt="A graphic of a desert" class="category-icon">
+            {% endif %}
+            {% if habit.current_streak == 0 %}
+              <h3>You haven't begun training this habit.</h3>
+            {% elif habit.current_streak == 1 %}
+              <h3>{{ habit.current_streak }} day down.</h3>
+            {% elif habit.current_streak > 1 %}
+              <h3>{{ habit.current_streak }} days down.</h3>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
   {% else %}
     <lottie-player src="https://lottie.host/f13fcda4-2e2e-44c2-9413-59a449d85295/vXFBR9ClwJ.json" background="##ffffff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
     <h1 class="header">Wow, such empty! This is where your habits will be diplayed. <a href="{% url 'habit-create' %}" class="a">Get started!</a></h1>

@@ -13,7 +13,23 @@
   
 <div class="card">
   <h2 class="header">{{ habit.habit }}</h2>
-  <p>{{ habit.category }}</p>
+  {% if habit.category == 'L' %}
+    <img src="{% static 'images/mountain.png' %}" alt="A graphic of a mountain">
+  {% elif habit.category == 'H' %}
+    <img src="{% static 'images/fireplace.png' %}" alt="A graphic of a fireplace" class="category-icon-l">
+  {% elif habit.category == 'W' %}
+    <img src="{% static 'images/work.png' %}" alt="A graphic of a briefcase" class="category-icon-l">
+  {% elif habit.category == 'R' %}
+    <img src="{% static 'images/buddy.png' %}" alt="A graphic of two friends side by side" class="category-icon-l">
+  {% elif habit.category == 'F' %}
+    <img src="{% static 'images/running.png' %}" alt="A graphic of a man running" class="category-icon-l">
+  {% elif habit.category == 'B' %}
+    <img src="{% static 'images/night.png' %}" alt="A graphic of a night sky" class="category-icon-l">
+  {% elif habit.category == 'E' %}
+    <img src="{% static 'images/earth.png' %}" alt="A graphic of the earth held by two hands with a small plant growing from it" class="category-icon-l">
+  {% else %}
+    <img src="{% static 'images/desert.png' %}" alt="A graphic of a desert" class="category-icon-l">
+  {% endif %}
   <p>{{ habit.description }}</p>
   {% if habit.current_streak == 0 %}
     <h3>You haven't started training this habit yet.</h3>
@@ -41,8 +57,8 @@
     <button type="submit" class="btn detail-btn reset">I broke my streak 😔</button>
   </form>
   <div class="btn-container">
-    <a href="{% url 'habit-update' habit.id %}" class="btn btn-a edit">Edit</a>
-    <a href="{% url 'habit-delete' habit.id %}" class="btn btn-a delete">Delete</a>
+    <a href="{% url 'habit-update' habit.id %}" class="btn btn-a edit">Edit ✏️</a>
+    <a href="{% url 'habit-delete' habit.id %}" class="btn btn-a delete">Delete 🗑️</a>
   </div>
 </div>
 
