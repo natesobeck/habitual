@@ -27,9 +27,13 @@ body {
   --color1: #cf3d27;
   --color2: #FBF0DC;
   --color3: #327f9b;
-  --color4: #3E3563;
+  --color4: #4a33a9;
+  --color6: #3E3563;
   --color5: #fff49b;
-  background-color: var(--color4);
+  /* background-color: var(--color4); */
+  background-image: url(../images/liquid-cheese.svg);
+  background-position: center;
+  background-size: cover;
   color: white;
   font-family: 'Merriweather', serif;
 }

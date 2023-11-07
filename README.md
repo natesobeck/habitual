@@ -41,6 +41,7 @@ Habitual is a tracking app that takes you from inconsistency to certified habit 
   - [Desert Icon](https://www.flaticon.com/free-icons/desert) created by Freepik
   - [Briefcase Icon](https://www.flaticon.com/free-icons/professions-and-jobs) created by Prosymbols Premium
 5. Merriweather font from [Google Fonts](https://fonts.google.com/specimen/Merriweather)
+6. Background mountain image from [svgbackground.com](https://www.svgbackgrounds.com/)
 
 ### 🧊 Icebox:
 

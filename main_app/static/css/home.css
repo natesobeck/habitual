@@ -106,7 +106,7 @@
 }
 
 .about-card h1, .about-card p {
-  background-color: rgba(50, 50, 50, .4);
+  background-color: rgba(50, 50, 50, .5);
   padding: 10px;
   border-radius: 5px;
   max-width: 1000px;
