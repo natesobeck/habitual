@@ -1,10 +1,4 @@
-.section-container {
-  margin-top: 30px;
-}
-
-.habit-card {
-  height: 400px;
-  width: 250px;
+.card {
   border-radius: 10px;
   background-image: linear-gradient(to left bottom, #cf3d27, #df7231, #eba049, #f5cb6d, #fff49b);
   box-shadow: 5px 5px 6px -1px #AAA;
@@ -12,9 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-a {
-  text-decoration: none;
-  color: var(--color4)
+  color: var(--color4);
+  padding: 15px;
+  margin-top: 30px;
 }

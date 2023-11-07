@@ -5,7 +5,7 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'css/habits/habit-detail.css' %}"
+  href="{% static 'css/habits/detail.css' %}"
 />
 {% endblock %}
 
@@ -22,7 +22,7 @@
   {% elif habit.current_streak < 7 %}
     <h3>You're at {{ habit.current_streak }} days, let's get to a week!</h3>
   {% elif habit.current_streak < 14 %}
-    <h3>Over a week down with {{ habit.current_streak }} days, keep it up!</h3>
+    <h3>Over a week down. {{ habit.current_streak }} days in, keep it up!</h3>
   {% elif habit.current_streak < 23 %}
     <h3>{{ habit.current_streak }} days in now. You're over halfway, be proud!</h3>
   {% elif habit.current_streak < 30 %}
@@ -31,16 +31,17 @@
     <h3>This is a certified habit! You probably don't even need this app anymore. Go you!</h3>
   {% endif %}
   <p>Best Streak: {{ habit.best_streak }} days</p>
+
+  <form action="{% url 'increase-streak' habit.id %}" method="post">
+    {% csrf_token %}
+    <button type='submit' class="btn submit">Increase my streak 🙌</button>
+  </form>
+  <form action="{% url 'reset-streak' habit.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn">I broke my streak 😔</button>
+  </form>
+  <a href="{% url 'habit-update' habit.id %}" class="btn">Edit</a>
+  <a href="{% url 'habit-delete' habit.id %}" class="btn">Delete</a>
 </div>
-<form action="{% url 'increase-streak' habit.id %}" method="post">
-  {% csrf_token %}
-  <button type='submit'>Increase my streak</button>
-</form>
-<form action="{% url 'reset-streak' habit.id %}" method="post">
-  {% csrf_token %}
-  <button type="submit">I broke my streak 😞 reset this habit's streak to one.</button>
-</form>
-<a href="{% url 'habit-update' habit.id %}">Edit</a>
-<a href="{% url 'habit-delete' habit.id %}">Delete</a>
 
 {% endblock %}

@@ -11,7 +11,7 @@
 
 {% block content %}
 
-<section>
+<section class="section-container">
   {% for habit in habits %}
   <a href="{% url 'habit-detail' habit.id %}">
     <div class="habit-card">
