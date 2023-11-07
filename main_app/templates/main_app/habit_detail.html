@@ -14,7 +14,7 @@
 <div class="card">
   <h2 class="header">{{ habit.habit }}</h2>
   {% if habit.category == 'L' %}
-    <img src="{% static 'images/mountain.png' %}" alt="A graphic of a mountain">
+    <img src="{% static 'images/mountain.png' %}" alt="A graphic of a mountain" class="category-icon-l">
   {% elif habit.category == 'H' %}
     <img src="{% static 'images/fireplace.png' %}" alt="A graphic of a fireplace" class="category-icon-l">
   {% elif habit.category == 'W' %}
