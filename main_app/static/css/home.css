@@ -73,13 +73,19 @@
   max-height: 300px;
   background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
   border-radius: 10px;
+  margin-top: 10%;
 }
 
 .login input {
   width: 80%;
-  min-width: 150px;
   margin-left: 10%;
+  min-width: 150px;
 }
+
 .login label {
   margin-left: 10%;
+}
+
+.title {
+  margin-top: -50px;
 }

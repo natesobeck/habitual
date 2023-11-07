@@ -68,7 +68,7 @@ nav li {
   padding: 8px 16px;
   border-radius: 10px;
   border-width: 2px;
-  border-style: solid;
+  border-style: none;
   text-decoration: none;
   cursor: pointer;
   font-family: inherit;
@@ -84,4 +84,14 @@ nav li {
 
 input, textarea {
   font-family: inherit;
+}
+
+.submit {
+  background-image: linear-gradient(to left bottom, #05b2dc, #15a4cd, #1d96be, #2288af, #247ba0);
+  color: white;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to left bottom, #04ceff, #1db8e6, #26a2cd, #298db5, #2a799c);
 }
