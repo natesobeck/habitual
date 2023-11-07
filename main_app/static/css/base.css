@@ -24,18 +24,19 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  --color1: #F06955;
+  --color1: #cf3d27;
   --color2: #FBF0DC;
-  --color3: #4897b3;
+  --color3: #327f9b;
   --color4: #3E3563;
   --color5: #fff49b;
   background-color: var(--color4);
   color: white;
+  font-family: 'Merriweather', serif;
 }
 
 header {
   width: 100%;
-  background-color: var(--color3);
+  background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
 }
 
 nav a {
@@ -79,4 +80,8 @@ nav li {
   position: absolute;
   left: 30px;
   top: 18px;
+}
+
+input, textarea {
+  font-family: inherit;
 }

@@ -2,15 +2,25 @@
   min-height: 100vh;
 }
 
-#home, .about-card {
+#home, .about-card, #about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+#home {
+  margin: 0px 25px;
+}
+
 #about {
   background-color: var(--color1);
+  min-height: 60vh;
+}
+
+.about-card {
+  padding: 0px 15px;
+  margin: 0px 15px;
 }
 
 .icon {
@@ -22,4 +32,54 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#contact {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--color3);
+  text-decoration-thickness: 2px;
+  background-color: var(--color3);
+}
+
+#contact h3 {
+  margin: 0;
+  padding-top: 15px;
+}
+
+.animation {
+  width: 80%;
+  max-width: 100vh;
+}
+
+.header {
+  color: var(--color5)
+}
+
+.section-container {
+  display: flex;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+  min-width: 250px;
+  max-height: 300px;
+  background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
+  border-radius: 10px;
+}
+
+.login input {
+  width: 80%;
+  min-width: 150px;
+  margin-left: 10%;
+}
+.login label {
+  margin-left: 10%;
 }
