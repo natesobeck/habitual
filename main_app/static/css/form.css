@@ -38,3 +38,10 @@ td > textarea {
   align-self: flex-end;
   margin-right: 40px;
 }
+
+.signup {
+  background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
+  border-radius: 10px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}

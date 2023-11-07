@@ -61,6 +61,7 @@
 
 .section-container {
   display: flex;
+  margin-right: 30px;
 }
 
 .login {
@@ -68,9 +69,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px 15px;
-  min-width: 250px;
-  max-height: 300px;
+  height: 300px;
+  width: 250px;
   background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
   border-radius: 10px;
   margin-top: 10%;
@@ -84,6 +84,16 @@
 
 .login label {
   margin-left: 10%;
+}
+
+.login li {
+  list-style: none;
+  padding: 0;
+  font-size: .8rem
+}
+
+.login h1 {
+  margin: 0;
 }
 
 .title {
