@@ -14,8 +14,12 @@
 }
 
 #about {
-  background-color: var(--color1);
+  /* background-color: var(--color1); */
+  background-image: url(../images/flat-mountains.svg);
+  background-size: cover;
+  background-position: center;
   min-height: 60vh;
+  width: 100%;
 }
 
 .about-card {
@@ -91,6 +95,19 @@
 }
 
 .title {
-  margin-top: -50px;
+  margin-top: -5vh;
+  margin-bottom: 5vh;
+  text-align: center;
 }
 
+.subtitle {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.about-card h1, .about-card p {
+  background-color: rgba(50, 50, 50, .4);
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 1000px;
+}
