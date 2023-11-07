@@ -15,7 +15,7 @@
   {% for habit in habits %}
   <a href="{% url 'habit-detail' habit.id %}">
     <div class="habit-card">
-      <h1>{{ habit.habit }}</h1>
+      <h1 class="header">{{ habit.habit }}</h1>
       <h3>{{ habit.category }}</h3>
       {% if habit.current_streak == 0 %}
         <h3>You haven't begun training this habit.</h3>
