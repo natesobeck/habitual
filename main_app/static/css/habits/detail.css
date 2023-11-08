@@ -25,3 +25,7 @@
 .btn-container {
   margin: 20px 0px;
 }
+
+.accent {
+  color: var(--color5)
+}

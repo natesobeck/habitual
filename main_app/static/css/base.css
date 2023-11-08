@@ -30,11 +30,12 @@ body {
   --color4: #4a33a9;
   --color6: #3E3563;
   --color5: #fff49b;
-  --smfont: .8em;
+  --smfont: .9em;
   --mdfont: 1em;
+  --lgmdfont: 1.3em;
   --lfont: 1.9em;
-  --xlfont: 2.5em;
-  --xxlfont: 3.5em;
+  --xlfont: 2.2em;
+  --xxlfont: 2.5em;
   background-image: url(../images/liquid-cheese.svg);
   background-position: center;
   background-size: cover;
@@ -43,28 +44,21 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
 }
 
 nav {
-  height: 60px;
+  height: 64px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  font-size: var(--smfont);
 }
 
 .dropdown.active > .nav-opener,
 .nav-opener:hover {
   cursor: pointer;
   color: var(--color1);
-  list-style: none;
 }
 
 .nav-content {
@@ -97,11 +91,11 @@ nav a {
 }
 
 #logo {
-  height: 30px;
+  height: 36px;
   border-radius: 4px;
   position: absolute;
   left: 15px;
-  top: 18px;
+  top: 16px;
 }
 
 input, textarea {
@@ -195,6 +189,10 @@ input, textarea {
   font-size: var(--mdfont)
 }
 
+.big-text {
+  font-size: var(--lgmdfont)
+}
+
 .text {
   font-size: var(--smfont)
 }
@@ -203,13 +201,6 @@ input, textarea {
   position: relative;
   margin-right: 20px;
   background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
-}
-
-.dropdown button {
-  border-style: none;
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--color5);
-  font-size: 20px;
 }
 
 .dropdown-menu {
@@ -225,6 +216,7 @@ input, textarea {
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   z-index: 1;
+  font-size: var(--mdfont)
 }
 
 .dropdown.active > .nav-opener + .dropdown-menu {
@@ -243,5 +235,47 @@ input, textarea {
 }
 
 .nav-arrow {
-  height: 25px;
+  height: 27px;
+}
+
+.nav-text {
+  font-size: var(--lfont)
+}
+
+button, a {
+  text-decoration: none;
+}
+
+@media(min-width: 900px) {
+  .title {
+    font-size: calc(var(--xlfont) - .1em)
+  }
+  .subtitle {
+    font-size: var(--lgmdfont)
+  }
+  .text {
+    font-size: calc(var(--mdfont) - .05em)
+  }
+  #logo {
+    height: 40px;
+    top: 12px;
+  }
+  .dropdown-menu {
+    font-size: calc(var(--mdfont) + .1em)
+  }
+}
+
+@media(min-width: 1300px) {
+  .title {
+    font-size: var(--xlfont)
+  }
+  .subtitle {
+    font-size: calc(var(--lgmdfont) + .1em)
+  }
+  .text {
+    font-size: var(--mdfont)
+  }
+  .dropdown-menu {
+    font-size: calc(var(--mdfont) + .15em)
+  }
 }

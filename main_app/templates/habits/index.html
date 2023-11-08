@@ -14,7 +14,7 @@
 
 <section class="section-container">
   {% if habits %}
-    <h1 class="header">All My Habits</h1>
+    <h1 class="header title">All My Habits</h1>
     <lottie-player src="{% static 'animations/habit-index.json' %}" background="##FFFFFF" speed="1" loop autoplay direction="1" mode="normal" class="index-animation"></lottie-player>
     <div class="habits-container">
       {% for habit in habits %}
@@ -39,11 +39,11 @@
               <img src="{% static 'images/desert.png' %}" alt="A graphic of a desert" class="category-icon">
             {% endif %}
             {% if habit.current_streak == 0 %}
-              <h3>You haven't begun training this habit.</h3>
+              <h3 class="subtitle">You haven't begun training this habit.</h3>
             {% elif habit.current_streak == 1 %}
-              <h3>{{ habit.current_streak }} day down.</h3>
+              <h3 class="subtitle">{{ habit.current_streak }} day down.</h3>
             {% elif habit.current_streak > 1 %}
-              <h3>{{ habit.current_streak }} days down.</h3>
+              <h3 class="subtitle">{{ habit.current_streak }} days down.</h3>
             {% endif %}
           </div>
         </a>
