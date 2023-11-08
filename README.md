@@ -1,6 +1,8 @@
 ## Habitual
 
-![A screenshot of the Habitual home page.](./main_app/static/images/README-screenshot-home.png)
+![A screenshot of the Habitual home page.](./main_app/static/images/README1.png)
+
+![A screenshot of the Habitual habit detail page.](./main_app/static/images/README2.png)
 
 ### [Go to Habitual!](https://habitual.fly.dev/)
 
