@@ -30,6 +30,11 @@ body {
   --color4: #4a33a9;
   --color6: #3E3563;
   --color5: #fff49b;
+  --smfont: .8em;
+  --mdfont: 1em;
+  --lfont: 1.9em;
+  --xlfont: 2.5em;
+  --xxlfont: 3.5em;
   background-image: url(../images/liquid-cheese.svg);
   background-position: center;
   background-size: cover;
@@ -42,29 +47,42 @@ header {
   background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
 }
 
-nav a {
-  font-size: 18px;
-  text-decoration: none;
-  color: white;
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-nav a:hover {
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: var(--smfont);
+}
+
+.dropdown.active > .nav-opener,
+.nav-opener:hover {
   cursor: pointer;
   color: var(--color1);
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
   list-style: none;
-  width: 100%;
-  padding-right: 20px;
 }
 
-nav li {
-  padding: 10px;
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+  flex-wrap: wrap;
+  width: calc(100% + .25rem);
+  gap: 10px;
+}
+
+.nav-content a {
+  color: var(--color5);
+  font-size: var(--mdfont);
+}
+
+.nav-content a:hover {
+  color: var(--color1)
 }
 
 .btn {
@@ -79,10 +97,10 @@ nav li {
 }
 
 #logo {
-  height: 40px;
+  height: 30px;
   border-radius: 4px;
   position: absolute;
-  left: 30px;
+  left: 15px;
   top: 18px;
 }
 
@@ -140,7 +158,8 @@ input, textarea {
 }
 
 .header {
-  color: var(--color5)
+  color: var(--color5);
+  padding: 0px 10px;
 }
 
 .confirm-header {
@@ -152,7 +171,7 @@ input, textarea {
 .animation {
   width: 80%;
   max-width: 100vh;
-  min-width: 350px;
+  min-width: 375px;
 }
 
 .category-icon {
@@ -161,4 +180,62 @@ input, textarea {
 
 .category-icon-l {
   height: 150px;
+}
+
+.title {
+  font-size: var(--lfont)
+}
+
+.subtitle {
+  font-size: var(--mdfont)
+}
+
+.text {
+  font-size: var(--smfont)
+}
+
+.dropdown {
+  position: relative;
+  margin-right: 20px;
+  background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
+}
+
+.dropdown button {
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--color5);
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + .25rem);
+  background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .nav-opener + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.btn-active {
+  transform: rotate(-90deg);
+  transition: transform 150ms ease-in-out;
+}
+
+.btn-inactive {
+  transition: transform 150ms ease-in-out;
+}
+
+.nav-arrow {
+  height: 25px;
 }
