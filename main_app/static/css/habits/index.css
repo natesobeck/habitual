@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .habit-card {
@@ -18,7 +19,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  margin: 0px 10px;
+  margin: 10px;
 }
 
 a {
@@ -45,5 +46,5 @@ a {
 
 .index-animation {
   width: 100%;
-  max-width: 400px;
+  max-width: 325px;
 }

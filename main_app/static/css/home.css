@@ -14,12 +14,12 @@
 }
 
 #about {
-  /* background-color: var(--color1); */
   background-image: url(../images/flat-mountains.svg);
   background-size: cover;
   background-position: center;
   min-height: 60vh;
   width: 100%;
+  padding: 20px 0px;
 }
 
 .about-card {
@@ -58,7 +58,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 30px;
 }
 
 .login {
@@ -110,4 +109,5 @@
   padding: 10px;
   border-radius: 5px;
   margin: 10px 10%;
+  text-align: center;
 }

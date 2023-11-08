@@ -30,7 +30,6 @@ body {
   --color4: #4a33a9;
   --color6: #3E3563;
   --color5: #fff49b;
-  /* background-color: var(--color4); */
   background-image: url(../images/liquid-cheese.svg);
   background-position: center;
   background-size: cover;
@@ -145,12 +144,15 @@ input, textarea {
 }
 
 .confirm-header {
-  margin-top: 30px;
+  margin-top: 0px 20px;
+  padding: 0px 10px;
+  text-align: center;
 }
 
 .animation {
   width: 80%;
   max-width: 100vh;
+  min-width: 350px;
 }
 
 .category-icon {
