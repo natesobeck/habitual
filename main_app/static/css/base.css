@@ -235,3 +235,7 @@ input, textarea {
 .btn-inactive {
   transition: transform 150ms ease-in-out;
 }
+
+.nav-arrow {
+  height: 25px;
+}

@@ -40,6 +40,7 @@ Habitual is a tracking app that takes you from inconsistency to certified habit 
   - [Night Icon](https://www.flaticon.com/free-icons/mountain) created by Freepik
   - [Desert Icon](https://www.flaticon.com/free-icons/desert) created by Freepik
   - [Briefcase Icon](https://www.flaticon.com/free-icons/professions-and-jobs) created by Prosymbols Premium
+5. Arrow icon made by gariebaldy from [Flat Icon](https://www.flaticon.com/free-icon/back_4467785?term=arrow+navigation&related_id=4467785)
 5. Merriweather font from [Google Fonts](https://fonts.google.com/specimen/Merriweather)
 6. Background mountain image from [svgbackground.com](https://www.svgbackgrounds.com/)
 

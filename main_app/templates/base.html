@@ -20,7 +20,8 @@
   <header>
     <nav class="dropdown" data-dropdown>
       <a href="{% url 'home' %}"><img src="{% static 'images/logo.svg' %}" alt="The habitual logo." id="logo"></a>
-      <button class="nav-opener" id="nav-opener" data-dropdown-button><</button>
+      {% comment %} <button class="nav-opener" id="nav-opener" data-dropdown-button><</button> {% endcomment %}
+      <img src="{% static 'images/back.png' %}" alt="A nav bar arrow" class="nav-arrow nav-opener" id="nav-opener" data-dropdown-button>
       <div class="dropdown-menu">
         <div class="nav-content">
           {% if user.is_authenticated %}
