@@ -1,5 +1,6 @@
 .section {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #home, .about-card, #about {
@@ -18,7 +19,7 @@
   background-size: cover;
   background-position: center;
   min-height: 60vh;
-  width: 100%;
+  overflow-y: hidden;
   padding: 20px 0px;
 }
 

@@ -42,6 +42,7 @@ body {
   background-size: cover;
   color: white;
   font-family: 'Merriweather', serif;
+  overflow-x: hidden;
 }
 
 header {
