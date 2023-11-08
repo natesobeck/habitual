@@ -12,26 +12,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <script src={% static 'js/dropdown.js' %} defer></script>
   {% block head %}
   {% endblock %}
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        {% if user.is_authenticated %}
-          <li><a href="{% url 'home' %}"><img src="{% static 'images/logo.svg' %}" alt="The habitual logo." id="logo"></a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="{% url 'habit-index' %}">All Your Habits</a></li>
-          <li><a href="{% url 'habit-create' %}">Add a New Habit</a></li>
-          <li><a href="{% url 'logout' %}">Log Out</a></li>
-        {% else %} 
-          <li><a href="{% url 'home' %}"><img src="{% static 'images/logo.svg' %}" alt="The habitual logo." id="logo"></a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="{% url 'home' %}">Log In</a></li>
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
+    <nav class="dropdown" data-dropdown>
+      <a href="{% url 'home' %}"><img src="{% static 'images/logo.svg' %}" alt="The habitual logo." id="logo"></a>
+      <button class="nav-opener" id="nav-opener" data-dropdown-button><</button>
+      <div class="dropdown-menu">
+        <div class="nav-content">
+          {% if user.is_authenticated %}
+            <a href="/#about">About</a>
+            <a href="{% url 'habit-index' %}">All Your Habits</a>
+            <a href="{% url 'habit-create' %}">Add a New Habit</a>
+            <a href="{% url 'logout' %}">Log Out</a>
+          {% else %}
+            <a href="/#about">About</a>
+            <a href="{% url 'home' %}">Log In</a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+          {% endif %}
+        </div>
+      </div>
     </nav>
   </header>
   <main>
