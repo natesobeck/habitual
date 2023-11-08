@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* The Universal Selector */
@@ -173,6 +174,14 @@ input, textarea {
   min-width: 375px;
 }
 
+.sm-animation {
+  width: 80%;
+  max-width: 100vh;
+  min-width: 325px;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
 .category-icon {
   height: 100px;
 }
@@ -210,7 +219,7 @@ input, textarea {
   background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
   padding: .75rem;
   border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+  box-shadow: 5px 5px 6px -1px #AAA;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
@@ -244,6 +253,14 @@ input, textarea {
 
 button, a {
   text-decoration: none;
+}
+
+.delete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 @media(min-width: 900px) {

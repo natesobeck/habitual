@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+{% block head %}
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+{% endblock head %}
 
-<form action="" method="post" class="confirm">
-  {% csrf_token %}
-  <h2 class="header confirm-header subtitle">Are you sure you want to delete habit: {{ habit.habit }}?</h2>
-  <div class="btn-container">
-    <a href="{% url 'habit-detail' habit.id %}" class="btn btn-a submit">
-      Cancel
-    </a>
-    <button type="submit" class="btn delete">Yes - Delete!</button>
-  </div>
-</form>
+{% block content %}
+<div class="delete-container">
+  <dotlottie-player src="{% static 'animations/trash.json' %}" background="transparent" speed="1" loop autoplay class="sm-animation"></dotlottie-player>
+
+  <form action="" method="post" class="confirm">
+    {% csrf_token %}
+    <h2 class="header confirm-header subtitle">Are you sure you want to delete habit: {{ habit.habit }}?</h2>
+    <div class="btn-container">
+      <a href="{% url 'habit-detail' habit.id %}" class="btn btn-a submit">
+        Cancel
+      </a>
+      <button type="submit" class="btn delete">Yes - Delete!</button>
+    </div>
+  </form>
+</div>
 
 {% endblock %}

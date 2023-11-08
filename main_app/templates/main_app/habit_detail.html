@@ -7,58 +7,62 @@
   type="text/css"
   href="{% static 'css/habits/detail.css' %}"
 />
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 {% endblock %}
 
 {% block content %}
-  
-<div class="card">
-  <h2 class="header title">{{ habit.habit }}</h2>
-  {% if habit.category == 'L' %}
-    <img src="{% static 'images/mountain.png' %}" alt="A graphic of a mountain" class="category-icon-l">
-  {% elif habit.category == 'H' %}
-    <img src="{% static 'images/fireplace.png' %}" alt="A graphic of a fireplace" class="category-icon-l">
-  {% elif habit.category == 'W' %}
-    <img src="{% static 'images/work.png' %}" alt="A graphic of a briefcase" class="category-icon-l">
-  {% elif habit.category == 'R' %}
-    <img src="{% static 'images/buddy.png' %}" alt="A graphic of two friends side by side" class="category-icon-l">
-  {% elif habit.category == 'F' %}
-    <img src="{% static 'images/running.png' %}" alt="A graphic of a man running" class="category-icon-l">
-  {% elif habit.category == 'B' %}
-    <img src="{% static 'images/night.png' %}" alt="A graphic of a night sky" class="category-icon-l">
-  {% elif habit.category == 'E' %}
-    <img src="{% static 'images/earth.png' %}" alt="A graphic of the earth held by two hands with a small plant growing from it" class="category-icon-l">
-  {% else %}
-    <img src="{% static 'images/desert.png' %}" alt="A graphic of a desert" class="category-icon-l">
-  {% endif %}
-  <p class="subtitle">{{ habit.description }}</p>
-  {% if habit.current_streak == 0 %}
-    <h3 class="big-text">You haven't started training this habit yet.</h3>
-  {% elif habit.current_streak == 1 %}
-    <h3 class="big-text">1 day down!</h3>
-  {% elif habit.current_streak < 7 %}
-    <h3 class="big-text">You're at <span class="accent">{{ habit.current_streak }}</span> days, let's get to a week!</h3>
-  {% elif habit.current_streak < 14 %}
-    <h3 class="big-text">Over a week down. <span class="accent">{{ habit.current_streak }}</span> days in, keep it up!</h3>
-  {% elif habit.current_streak < 23 %}
-    <h3 class="big-text"><span class="accent">{{ habit.current_streak }}</span> days in now. You're over halfway, be proud!</h3>
-  {% elif habit.current_streak < 30 %}
-    <h3 class="big-text">You're at <span class="accent">{{ habit.current_streak }}</span> days. Less than a week left! You got this.</h3>
-  {% else %}
-    <h3 class="big-text">This is a certified habit! You probably don't even need this app anymore. Go you!</h3>
-  {% endif %}
-  <p class="subtitle">Best Streak: <span class="accent">{{ habit.best_streak }}</span> days</p>
+<div class="detail-container">
+  <dotlottie-player src="{% static 'animations/gardening.json' %}" background="transparent" speed="1"loop autoplay class="sm-animation"></dotlottie-player>
 
-  <form action="{% url 'increase-streak' habit.id %}" method="post">
-    {% csrf_token %}
-    <button type='submit' class="btn detail-btn submit">Increase my streak 🙌</button>
-  </form>
-  <form action="{% url 'reset-streak' habit.id %}" method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn detail-btn reset">I broke my streak 😔</button>
-  </form>
-  <div class="btn-container">
-    <a href="{% url 'habit-update' habit.id %}" class="btn btn-a edit">Edit ✏️</a>
-    <a href="{% url 'habit-delete' habit.id %}" class="btn btn-a delete">Delete 🗑️</a>
+  <div class="card">
+    <h2 class="header title">{{ habit.habit }}</h2>
+    {% if habit.category == 'L' %}
+      <img src="{% static 'images/mountain.png' %}" alt="A graphic of a mountain" class="category-icon-l">
+    {% elif habit.category == 'H' %}
+      <img src="{% static 'images/fireplace.png' %}" alt="A graphic of a fireplace" class="category-icon-l">
+    {% elif habit.category == 'W' %}
+      <img src="{% static 'images/work.png' %}" alt="A graphic of a briefcase" class="category-icon-l">
+    {% elif habit.category == 'R' %}
+      <img src="{% static 'images/buddy.png' %}" alt="A graphic of two friends side by side" class="category-icon-l">
+    {% elif habit.category == 'F' %}
+      <img src="{% static 'images/running.png' %}" alt="A graphic of a man running" class="category-icon-l">
+    {% elif habit.category == 'B' %}
+      <img src="{% static 'images/night.png' %}" alt="A graphic of a night sky" class="category-icon-l">
+    {% elif habit.category == 'E' %}
+      <img src="{% static 'images/earth.png' %}" alt="A graphic of the earth held by two hands with a small plant growing from it" class="category-icon-l">
+    {% else %}
+      <img src="{% static 'images/desert.png' %}" alt="A graphic of a desert" class="category-icon-l">
+    {% endif %}
+    <p class="text">{{ habit.description }}</p>
+    {% if habit.current_streak == 0 %}
+      <h3 class="big-text">You haven't started training this habit yet.</h3>
+    {% elif habit.current_streak == 1 %}
+      <h3 class="big-text">1 day down!</h3>
+    {% elif habit.current_streak < 7 %}
+      <h3 class="big-text">You're at <span class="accent">{{ habit.current_streak }}</span> days, let's get to a week!</h3>
+    {% elif habit.current_streak < 14 %}
+      <h3 class="big-text">Over a week down. <span class="accent">{{ habit.current_streak }}</span> days in, keep it up!</h3>
+    {% elif habit.current_streak < 23 %}
+      <h3 class="big-text"><span class="accent">{{ habit.current_streak }}</span> days in now. You're over halfway, be proud!</h3>
+    {% elif habit.current_streak < 30 %}
+      <h3 class="big-text">You're at <span class="accent">{{ habit.current_streak }}</span> days. Less than a week left! You got this.</h3>
+    {% else %}
+      <h3 class="big-text">This is a certified habit! You probably don't even need this app anymore. Go you!</h3>
+    {% endif %}
+    <p class="subtitle">Best Streak: <span class="accent">{{ habit.best_streak }}</span> days</p>
+
+    <form action="{% url 'increase-streak' habit.id %}" method="post">
+      {% csrf_token %}
+      <button type='submit' class="btn detail-btn submit">Increase my streak 🙌</button>
+    </form>
+    <form action="{% url 'reset-streak' habit.id %}" method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn detail-btn reset">I broke my streak 😔</button>
+    </form>
+    <div class="btn-container">
+      <a href="{% url 'habit-update' habit.id %}" class="btn btn-a edit">Edit ✏️</a>
+      <a href="{% url 'habit-delete' habit.id %}" class="btn btn-a delete">Delete 🗑️</a>
+    </div>
   </div>
 </div>
 
