@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  --color1: #cf3d27;
+  --color1: #ff6952;
   --color2: #FBF0DC;
   --color3: #327f9b;
   --color4: #4a33a9;
@@ -149,8 +149,13 @@ input, textarea {
 
 .confirm {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(to right top, #228b22, #008d59, #008b80, #008697, #327f9b);
+  margin: 20px 10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
 }
 
 .confirm button, .confirm a {
@@ -219,6 +224,7 @@ input, textarea {
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  z-index: 1;
 }
 
 .dropdown.active > .nav-opener + .dropdown-menu {

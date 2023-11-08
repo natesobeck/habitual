@@ -12,9 +12,9 @@
     <form action="" method="post" autocomplete="off" class="form add">
       {% csrf_token %}
       {% if habit %}
-        <h1 class="header">Edit this Habit</h1>
+        <h1 class="header title">Edit this Habit</h1>
       {% else %}
-        <h1 class="header">Add a New Habit</h1>
+        <h1 class="header title">Add a New Habit</h1>
       {% endif %}
       <table>
         {{ form.as_table }}

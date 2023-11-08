@@ -3,14 +3,15 @@
 
 {% block content %}
 
-<h2 class="header confirm-header">Are you sure you want to delete habit: {{ habit.habit }}?</h2>
-
 <form action="" method="post" class="confirm">
   {% csrf_token %}
-  <a href="{% url 'habit-detail' habit.id %}" class="btn btn-a submit">
-    Cancel
-  </a>
-  <button type="submit" class="btn delete">Yes - Delete!</button>
+  <h2 class="header confirm-header subtitle">Are you sure you want to delete habit: {{ habit.habit }}?</h2>
+  <div class="btn-container">
+    <a href="{% url 'habit-detail' habit.id %}" class="btn btn-a submit">
+      Cancel
+    </a>
+    <button type="submit" class="btn delete">Yes - Delete!</button>
+  </div>
 </form>
 
 {% endblock %}
