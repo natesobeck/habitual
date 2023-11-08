@@ -35,6 +35,18 @@ td > textarea {
   font-family: inherit;
 }
 
+li {
+  list-style: none;
+  color: var(--color5);
+  font-size: var(--smfont);
+  margin-bottom: 5px;
+  margin-left: -150px;
+}
+
+.helptext {
+  font-size: var(--smfont);
+}
+
 .btn {
   align-self: flex-end;
   margin-right: 40px;
@@ -64,4 +76,10 @@ td > textarea {
 .form-animation {
   width: 75%;
   max-width: 400px;
+}
+
+@media(max-width: 400px) {
+  .signup {
+    margin-left: 2.5%;
+  }
 }

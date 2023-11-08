@@ -20,6 +20,7 @@
         {{ form.as_p }}
         <input type="hidden" name="next" value="{{ next }}">
         <button type="submit" class="btn submit">Login</button>
+        <a href="{% url 'signup' %}" class="signup-link text">Don't have an account? Sign Up!</a>
       </form>
     {% endif %}
   </div>
